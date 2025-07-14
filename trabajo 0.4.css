@@ -1,0 +1,72 @@
+/* 1. Cambiar fondo del body si el ancho es mayor a 400px */
+@media (min-width: 401px) {
+  body {
+    background-color: rgb(40, 60, 80);
+  }
+}
+
+/* 2. Centrar el título h1 si el ancho es menor a 800px */
+@media (max-width: 799px) {
+  h1 {
+    text-align: center;
+  }
+}
+
+/* 3. Ancho del article a 50ch en pantallas horizontales */
+@media (orientation: landscape) {
+  article {
+    max-width: 50ch;
+  }
+}
+
+/* 4. Cambiar color del título h1 si el alto es de al menos 200px */
+@media (min-height: 200px) {
+  h1 {
+    color: #f1c;
+  }
+}
+
+/* 5. Mostrar fuente serif cuando se imprime */
+@media print {
+  p {
+    font-family: serif;
+  }
+}
+
+/* 6. Preferencia por colores claros (modo claro) */
+@media (prefers-color-scheme: light) {
+  body, h1 {
+    color: #111;
+    background-color: #ddd;
+  }
+}
+
+/* 7. Pantalla sin soporte para hover */
+@media (hover: none) and (pointer: coarse) {
+  a {
+    background-color: #212;
+    padding: 2px 5px;
+  }
+}
+
+/* 8. Pantalla de al menos 800px pero menos de 900px → ocultar imagen */
+@media (min-width: 800px) and (max-width: 899px) {
+  img {
+    display: none;
+  }
+}
+
+/* 9. Pantalla de 200px x 400px → imagen con height: 400px y object-fit: cover */
+@media (width: 200px) and (height: 400px) {
+  img {
+    height: 400px;
+    object-fit: cover;
+  }
+}
+
+/* 10. Device Pixel Ratio > 2 → fondo del <article> cambia a #667 */
+@media (resolution: 2dppx) {
+  article {
+    background-color: #667;
+  }
+}
